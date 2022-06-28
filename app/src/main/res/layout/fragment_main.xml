@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".ui.main.BaseFragment">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="@drawable/round_button"
+        android:elevation="15dp"
+        android:stateListAnimator="@null"
+        android:text="@string/create_new_notification"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@id/item_counter_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_counter_value"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="40dp"
+        android:background="@drawable/counter_view_bg"
+        android:gravity="center"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dec_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/counter_view_button_bg"
+        android:elevation="15dp"
+        android:scaleType="center"
+        android:stateListAnimator="@null"
+        android:src="@drawable/ic_baseline_remove_24"
+        app:layout_constraintBottom_toBottomOf="@id/item_counter_value"
+        app:layout_constraintStart_toStartOf="@id/item_counter_value"
+        app:layout_constraintTop_toTopOf="@id/item_counter_value" />
+
+    <ImageButton
+        android:id="@+id/inc_button"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/counter_view_button_bg"
+        android:elevation="15dp"
+        android:stateListAnimator="@null"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toBottomOf="@id/item_counter_value"
+        app:layout_constraintEnd_toEndOf="@id/item_counter_value"
+        app:layout_constraintTop_toTopOf="@id/item_counter_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
